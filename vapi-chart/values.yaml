@@ -37,11 +37,9 @@ securityContext: {}
   # runAsUser: 1000
 
 service:
-  type: ClusterIP
+  type: nodePort
   port: 80
-  service:
-    name: vapi
-    nodePort: 30001
+  nodePort: 30001
 ingress:
   enabled: true
   className: ""
