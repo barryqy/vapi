@@ -30,6 +30,7 @@ spec:
     port: 80
     protocol: TCP
     targetPort: http
+  type: NodePort
     
 dependencies:
   - name: mysql
