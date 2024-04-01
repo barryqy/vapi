@@ -154,7 +154,7 @@ mysql:
   image:
     registry: docker.io
     repository: bitnami/mysql
-    tag: latest
+    tag: 8.0
     debug: true
     ## Specify a imagePullPolicy
     ## Defaults to 'Always' if image tag is 'latest', else set to 'IfNotPresent'
@@ -234,7 +234,7 @@ mysql:
       mysql -P 3306 -uroot -p$MYSQL_ROOT_PASSWORD -e "CREATE DATABASE IF NOT EXISTS vapi";
       echo "Curling vapi.sql ..."
       apt-get update && apt-get install -y curl
-      curl https://raw.githubusercontent.com/roottusk/vapi/master/database/vapi.sql -o /tmp/vapi.sql
+      curl https://raw.githubusercontent.com/barryqy/vapi/master/database/vapi.sql -o /tmp/vapi.sql
       echo "Importing sql ..."
       mysql -u root -p$MYSQL_ROOT_PASSWORD vapi < /tmp/vapi.sql
 
